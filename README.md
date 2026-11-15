@@ -44,12 +44,6 @@ program5-fullstack/
 7. Select Node.js and copy the connection string.
 8. Replace the username, password and cluster placeholder. The database name in this project is `placement_db`.
 
-Example format (not a real credential):
-
-```text
-mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@cluster0.example.mongodb.net/placement_db?retryWrites=true&w=majority
-```
-
 If your password contains reserved URL characters, URL-encode those characters before putting the URI in `.env`.
 
 MongoDB creates the `users` and `applications` collections automatically when the first documents are inserted. You do not need to run SQL or create tables manually.
@@ -73,7 +67,7 @@ Edit `.env` and set your actual Atlas connection string and a long, private JWT 
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/placement_db?retryWrites=true&w=majority
+MONGO_URI=
 JWT_SECRET=use_a_long_random_secret_value
 CLIENT_URL=http://localhost:5173
 NODE_ENV=development
